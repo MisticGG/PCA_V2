@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='chat.css') }}">
+
+</head>
+<body>
+    <div class="main-container">
+        <div class="server-list">
+            <button class="direct-messages-button">DM</button>
+            <div class="server-separator"></div>
+            <div class="servers-label"></div> {% for server in servers %}
+            <div class="server-icon" data-server-id="{{ server.id }}">{{ server.name[0]|upper }}</div>
+            {% endfor %}
+            <div class="server-list-bottom-spacer"></div>
+            <div class="create-server-icon" id="create-server-button">+</div>
+        </div>
+        <div class="chat-area">
+            <div class="channel-list" id="channel-list-area">
+                <h2 id="server-name"></h2>
+                <ul id="channels">
+                    </ul>
+            </div>
+            <div class="message-area">
+                <div class="messages">
+                    </div>
+                <div class="message-input">
+                    <input type="text" id="message-input" placeholder="Message #general">
+                    <button id="send-button">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="context-menu">
+        <ul>
+            <li id="create-channel">Create Channel</li>
+        </ul>
+    </div>
+
+    <script src="{{ url_for('static', filename='chat.js') }}"></script>
+</body>
+</html>
