@@ -1,0 +1,281 @@
+/* static/chat.css */
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #36393f;
+  color: #dcddde;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.main-container {
+  display: flex;
+  height: 100%;
+}
+
+.server-list {
+  width: 70px;
+  background-color: #2f3136;
+  padding: 10px 0; /* Increased padding */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.server-icon {
+  width: 50px; /* Slightly larger */
+  height: 50px; /* Slightly larger */
+  border-radius: 50%;
+  background-color: #36393f;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px; /* Increased margin */
+  font-size: 18px; /* Slightly larger font */
+  cursor: pointer;
+  overflow: hidden;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.server-icon:hover {
+  border-radius: 15px;
+}
+
+.chat-area {
+  display: flex;
+  flex-grow: 1;
+  background-color: #36393f;
+  height: 100%;
+}
+
+.channel-list {
+  width: 240px; /* Slightly wider */
+  background-color: #202225;
+  padding: 15px; /* Increased padding */
+  box-sizing: border-box;
+  height: 100%;
+  user-select: none;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.channel-list h2 {
+  color: #fff;
+  margin-top: 0;
+  margin-bottom: 15px; /* Increased margin */
+  font-size: 1.2em; /* Slightly larger font */
+  font-weight: bold;
+}
+
+.channel-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.channel-list li {
+  padding: 10px 18px; /* Increased padding */
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1em; /* Consistent font size */
+}
+
+.channel-list li:hover {
+  background-color: #40444b;
+}
+
+.message-area {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 25px; /* Increased padding */
+  box-sizing: border-box;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.messages {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-bottom: 25px; /* Increased padding */
+}
+
+.message {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px; /* Increased margin */
+}
+
+.profile-icon {
+  width: 40px; /* Larger profile icon */
+  height: 40px; /* Larger profile icon */
+  border-radius: 50%;
+  background-color: #5865f2;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px; /* Slightly larger font in icon */
+  font-weight: bold;
+  margin-right: 12px; /* Increased margin */
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.message-content {
+  flex-grow: 1;
+}
+
+.username {
+  color: #b9bbbe;
+  font-weight: bold;
+  margin-bottom: 4px; /* Increased margin */
+  display: block;
+  font-size: 1em; /* Consistent font size */
+}
+
+.message-text {
+  color: #dcddde;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  line-height: 1.4; /* Slightly more spacious line height */
+  font-size: 1em; /* Consistent font size */
+}
+
+.message-timestamp {
+  color: #72767d;
+  font-size: 0.9em; /* Slightly larger timestamp */
+  margin-left: 8px; /* Increased margin */
+}
+
+.message-input {
+  display: flex;
+  padding-top: 15px; /* Increased padding */
+}
+
+.message-input input[type="text"] {
+  flex-grow: 1;
+  padding: 12px; /* Increased padding */
+  border-radius: 7px; /* Slightly more rounded */
+  border: none;
+  background-color: #40444b;
+  color: #dcddde;
+  box-sizing: border-box;
+  margin-right: 10px; /* Increased margin */
+  font-size: 1em; /* Consistent font size */
+}
+
+.message-input button {
+  padding: 12px 20px; /* Increased padding */
+  border: none;
+  border-radius: 7px; /* Slightly more rounded */
+  background-color: #7289da;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1em; /* Consistent font size */
+}
+
+.message-input button:hover {
+  background-color: #677bc4;
+}
+
+.direct-messages-button {
+  background-color: #36393f;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 50px; /* Slightly larger */
+  height: 50px; /* Slightly larger */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px; /* Increased margin */
+  font-size: 22px; /* Slightly larger font */
+  cursor: pointer;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.direct-messages-button:hover {
+  border-radius: 15px;
+}
+
+.servers-label {
+  color: #fff;
+  margin-bottom: 6px; /* Increased margin */
+  font-size: 0.9em;
+  display: none; /* Removed "Servers" text */
+}
+
+.server-separator {
+  width: 36px; /* Slightly wider */
+  height: 3px; /* Slightly thicker */
+  background-color: #474b52;
+  margin: 10px 0; /* Increased margin */
+}
+
+.create-server-icon {
+  width: 50px; /* Slightly larger */
+  height: 50px; /* Slightly larger */
+  border-radius: 50%;
+  background-color: #3ba55d;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px; /* Increased margin */
+  font-size: 26px; /* Slightly larger font */
+  cursor: pointer;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.create-server-icon:hover {
+  border-radius: 15px;
+}
+
+.server-list-bottom-spacer {
+  flex-grow: 1;
+}
+
+#context-menu {
+  position: absolute;
+  background-color: #202225;
+  color: #dcddde;
+  border-radius: 7px; /* Slightly more rounded */
+  padding: 10px 0; /* Increased padding */
+  min-width: 160px; /* Slightly wider */
+  z-index: 10;
+  display: none;
+  font-size: 1em; /* Consistent font size */
+}
+
+#context-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#context-menu li {
+  padding: 10px 20px; /* Increased padding */
+  cursor: pointer;
+}
+
+#context-menu li:hover {
+  background-color: #40444b;
+}
+
+#context-menu li.delete-option {
+  color: #f04747; /* Red color for delete options */
+}
+
+#context-menu li.delete-option:hover {
+  background-color: #3d2929; /* Darker red on hover */
+}
